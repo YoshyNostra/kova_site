@@ -1,0 +1,44 @@
+/* =========================================================
+   Kova — animations au défilement
+   Fichier indépendant : ne touche à aucun autre style du site.
+   Pour tout désactiver : supprimez le lien vers ce fichier
+   dans index.html. Le site redevient exactement comme avant.
+   ========================================================= */
+
+/* État de départ : l'élément est décalé vers le bas et invisible.
+   Rien ne s'applique tant que le script n'a pas ajouté la classe .anim-ready
+   sur <html> — donc si le JS ne charge pas, le site reste normal. */
+html.anim-ready .rv{
+  opacity:0;
+  transform:translate3d(0,26px,0);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity,transform;
+}
+
+/* Quand l'élément entre à l'écran, le script ajoute .rv-in */
+html.anim-ready .rv.rv-in{
+  opacity:1;
+  transform:translate3d(0,0,0);
+}
+
+/* Décalage en cascade pour les groupes (cartes d'offres, etc.) */
+html.anim-ready .rv-d1{transition-delay:.09s}
+html.anim-ready .rv-d2{transition-delay:.18s}
+html.anim-ready .rv-d3{transition-delay:.27s}
+
+/* Léger effet de parallaxe sur la bannière de l'accueil */
+html.anim-ready .hero .pixwrap{
+  transition:transform .1s linear;
+}
+
+/* Respect du réglage système « Réduire les animations » :
+   tout s'affiche immédiatement, sans mouvement. */
+@media (prefers-reduced-motion:reduce){
+  html.anim-ready .rv,
+  html.anim-ready .rv.rv-in{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+}
