@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentation Kova — Guide du panel</title>
+<style type="text/css">@font-face {font-family:'Manrope';font-style:normal;font-weight:400;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:400;src:url(/cf-fonts/v/manrope/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:400;src:url(/cf-fonts/v/manrope/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:400;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:400;src:url(/cf-fonts/v/manrope/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:400;src:url(/cf-fonts/v/manrope/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:500;src:url(/cf-fonts/v/manrope/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:500;src:url(/cf-fonts/v/manrope/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:500;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:500;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:500;src:url(/cf-fonts/v/manrope/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:500;src:url(/cf-fonts/v/manrope/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:600;src:url(/cf-fonts/v/manrope/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:600;src:url(/cf-fonts/v/manrope/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:600;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:600;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:600;src:url(/cf-fonts/v/manrope/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:600;src:url(/cf-fonts/v/manrope/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:700;src:url(/cf-fonts/v/manrope/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:700;src:url(/cf-fonts/v/manrope/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:700;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:700;src:url(/cf-fonts/v/manrope/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:700;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:700;src:url(/cf-fonts/v/manrope/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:800;src:url(/cf-fonts/v/manrope/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:800;src:url(/cf-fonts/v/manrope/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:800;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:800;src:url(/cf-fonts/v/manrope/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:800;src:url(/cf-fonts/v/manrope/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Manrope';font-style:normal;font-weight:800;src:url(/cf-fonts/v/manrope/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'JetBrains Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}</style>
+<style>
+:root{
+  --bg:#f2f2f3; --card:#fff; --line:#e8e8ea; --line2:#dedee1;
+  --ink:#0d0d0f; --ink2:#3c3c40; --muted:#77777e; --faint:#a5a5ac;
+  --blue:#2f45ff; --blue-soft:#eef1ff; --r:22px; --r-lg:26px; --r-sm:14px;
+  --sh:0 1px 2px rgba(12,12,18,.04),0 8px 26px rgba(12,12,18,.05);
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);
+  color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+code{font-family:var(--mono);font-size:.92em;background:var(--blue-soft);color:#2233bb;
+  padding:2px 6px;border-radius:6px}
+.ic{display:inline-flex;flex:none;width:22px;height:22px}
+.ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round}
+
+.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.top-in{max-width:1240px;margin:0 auto;padding:16px 22px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo{width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:16px}
+.top small{color:var(--muted);font-size:14px;margin-left:auto}
+
+.layout{max-width:1240px;margin:0 auto;padding:26px 22px 80px;
+  display:grid;grid-template-columns:280px 1fr;gap:30px;align-items:start}
+.side{position:sticky;top:92px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:20px 16px;max-height:calc(100vh - 120px);overflow:auto}
+.side h4{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
+  font-weight:700;margin:18px 0 8px;padding-left:13px}
+.side h4:first-child{margin-top:0}
+.side a{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:var(--r-sm);
+  color:var(--ink2);font-size:14.5px;font-weight:500}
+.side a .ic{width:18px;height:18px;color:var(--muted)}
+.side a:hover{background:var(--bg)}
+.side a.on{background:var(--blue-soft);color:#1a27b8;font-weight:600}
+.side a.on .ic{color:#1a27b8}
+
+.content{min-width:0}
+.hero-doc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:38px 34px;margin-bottom:26px}
+.hero-doc h1{font-size:clamp(28px,4.4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.hero-doc p{color:var(--muted);font-size:17px;margin-top:12px;max-width:62ch}
+.pill{display:inline-block;background:var(--blue-soft);color:#1a27b8;font-size:12.5px;
+  font-weight:700;padding:6px 12px;border-radius:99px;margin-bottom:14px}
+
+.doc-page{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:32px 30px;margin-bottom:22px;scroll-margin-top:100px}
+.doc-head{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.doc-head .ic{width:30px;height:30px;color:var(--blue)}
+.doc-head h2{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.doc-intro{color:var(--ink2);font-size:16.5px;margin-bottom:22px;max-width:66ch}
+.doc-page h3{font-size:13px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);
+  font-weight:700;margin:24px 0 12px}
+.doc-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+.doc-list li{display:flex;flex-direction:column;gap:3px;padding-left:16px;position:relative}
+.doc-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+  border-radius:50%;background:var(--blue)}
+.doc-list b{font-size:15.5px;font-weight:600}
+.doc-list span{color:var(--muted);font-size:15px}
+.doc-steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:12px}
+.doc-steps li{counter-increment:s;display:flex;gap:13px;color:var(--ink2);font-size:15.5px}
+.doc-steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;
+  background:var(--blue-soft);color:#1a27b8;display:grid;place-items:center;
+  font-weight:700;font-size:13.5px;margin-top:1px}
+.doc-tip{display:flex;gap:13px;background:var(--blue-soft);border-radius:var(--r);
+  padding:16px 18px;margin-top:24px}
+.doc-tip .ic{width:20px;height:20px;color:#1a27b8;margin-top:2px}
+.doc-tip p{font-size:15px;color:#232a6b}
+.foot{text-align:center;color:var(--faint);font-size:13.5px;padding:26px 0 0}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;padding:18px 16px 60px}
+  .side{position:static;max-height:none}
+  .doc-page{padding:26px 22px}
+  .hero-doc{padding:28px 22px}
+  .top small{display:none}
+}
+@media print{
+  .side,.top{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  .doc-page{break-inside:avoid;border:0;box-shadow:none;padding:0 0 26px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><span class="logo">K</span>Kova</div>
+    <small>Documentation du panel · version 1</small>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="side">
+    <h4>Pour vos clients</h4>
+    <a href="#dashboard" data-target="dashboard"><span class="ic "><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 12l4-3"/></svg></span><span>Tableau de bord</span></a>
+    <a href="#console" data-target="console"><span class="ic "><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2.5"/><path d="M9 20h6M12 16.5V20"/></svg></span><span>Console</span></a>
+    <a href="#settings" data-target="settings"><span class="ic "><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1.4"/><circle cx="15" cy="9" r="1.4"/><circle cx="9.5" cy="15" r="1.4"/><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.5 0 2-1 1.4-2-.7-1 .2-2.2 1.4-2.2h1.7a3.5 3.5 0 0 0 3.5-3.5C20 7.6 16.4 3.5 12 3.5z"/></svg></span><span>Personnalisation</span></a>
+    <a href="#drive" data-target="drive"><span class="ic "><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><circle cx="8.5" cy="10" r="1.6"/><path d="M4 17l4.5-4.5L13 17l2.5-2.5L20 18"/></svg></span><span>Drive</span></a>
+    <a href="#files" data-target="files"><span class="ic "><svg viewBox="0 0 24 24"><path d="M3.5 7.5A2 2 0 0 1 5.5 5.5h4l2 2h7A2 2 0 0 1 20.5 9.5v7a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></span><span>Fichiers</span></a>
+    <a href="#logs" data-target="logs"><span class="ic "><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span><span>Logs &amp; Webhooks</span></a>
+    <a href="#activity" data-target="activity"><span class="ic "><svg viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 0 1 6 3.5h13v15H6a2 2 0 0 0-2 2z"/><path d="M4 18.5A2 2 0 0 1 6 16.5h13"/></svg></span><span>Journal d'activités</span></a>
+    <a href="#account" data-target="account"><span class="ic "><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.8 12h2.4M18.8 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg></span><span>Paramètres</span></a>
+    <h4>Pour vous, administrateur</h4>
+    <a href="#admin-offres" data-target="admin-offres"><span class="ic "><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><span>Gérer vos offres</span></a>
+    <a href="#admin-clients" data-target="admin-clients"><span class="ic "><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 20c.6-3 2.8-4.8 5.5-4.8S14 17 14.6 20"/><path d="M16 5.6a3 3 0 0 1 0 5.8M17.5 20c-.2-1.6-.7-2.9-1.5-3.9"/></svg></span><span>Gérer vos clients</span></a>
+    <a href="#admin-depannage" data-target="admin-depannage"><span class="ic "><svg viewBox="0 0 24 24"><path d="M14.7 6.3a3.6 3.6 0 0 0 4.8 4.8l-7 7a2.6 2.6 0 0 1-3.7-3.7z"/><path d="M6.5 6.5l3 3"/></svg></span><span>Dépannage</span></a>
+  </aside>
+
+  <main class="content">
+    <section class="hero-doc">
+      <span class="pill">Guide complet</span>
+      <h1>Le panel Kova, page par page</h1>
+      <p>Tout ce que votre client peut faire depuis son espace, et tout ce que vous pouvez faire depuis l'administration. Chaque section indique ce que contient la page, comment s'en servir, et le piège à connaître.</p>
+    </section>
+
+<section class="doc-page" id="dashboard">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 12l4-3"/></svg></span><h2>Tableau de bord</h2></div>
+  <p class="doc-intro">La première page que voit votre client après connexion. Elle résume l'état de son serveur en un coup d'œil.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Nom du serveur</b><span>Le nom qu'il a choisi dans Personnalisation.</span></li>
+    <li><b>Version de base</b><span>La version de sa base FiveM (V29 par défaut). Modifiable en admin comme dans Personnalisation.</span></li>
+    <li><b>Joueurs en ligne</b><span>Compté en direct sur son serveur, via son adresse IP:port.</span></li>
+    <li><b>État du système</b><span>Point vert si le serveur tourne, rouge s'il est éteint.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Cliquez sur <b>Éteindre</b> : le point passe au rouge et le bouton devient <b>Démarrer</b>.</li>
+    <li>Les deux boutons carrés à droite relancent le serveur ou ouvrent le calendrier des redémarrages.</li>
+    <li>Les <b>Actions rapides</b> mènent directement à la personnalisation, aux fichiers ou à la console.</li>
+    <li>Le <b>Journal d'activités</b> garde la trace de tout : démarrages, arrêts, téléversements, paiements.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Si le point reste gris et que le compteur affiche 1, votre panel est en mode démonstration : Pterodactyl n'est pas encore relié.</p></div>
+</section>
+
+<section class="doc-page" id="console">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2.5"/><path d="M9 20h6M12 16.5V20"/></svg></span><h2>Console</h2></div>
+  <p class="doc-intro">La console affiche en direct tout ce que dit le serveur, et vous permet de lui envoyer des commandes.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Ligne de tête</b><span>« Connecté · N lignes » avec le point vert : la connexion permanente est établie.</span></li>
+    <li><b>Les logs</b><span>Horodatage en gris, [ script:seed] en bleu, [ citizen-server-impl] en turquoise.</span></li>
+    <li><b>La barre de saisie</b><span>En bas, précédée d'un chevron › : tapez votre commande et validez avec Entrée.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Tapez <code>say Bienvenue sur le serveur</code> puis Entrée : le message apparaît dans la console et chez les joueurs.</li>
+    <li><code>restart esx_policejob</code> redémarre une ressource sans couper le serveur.</li>
+    <li><code>stop</code> éteint proprement le serveur — préférez ceci au bouton Forcer l'arrêt.</li>
+    <li>Rien ne s'efface : les lignes restent consultables en remontant dans le cadre.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Une commande sans effet ? C'est presque toujours une faute de frappe dans le nom de la ressource. La console affiche l'erreur juste en dessous.</p></div>
+</section>
+
+<section class="doc-page" id="settings">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="1.4"/><circle cx="15" cy="9" r="1.4"/><circle cx="9.5" cy="15" r="1.4"/><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.5 0 2-1 1.4-2-.7-1 .2-2.2 1.4-2.2h1.7a3.5 3.5 0 0 0 3.5-3.5C20 7.6 16.4 3.5 12 3.5z"/></svg></span><h2>Personnalisation</h2></div>
+  <p class="doc-intro">Tout ce qui identifie le serveur auprès des joueurs se règle ici.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Nom du serveur</b><span>Le nom affiché dans le panel et en jeu.</span></li>
+    <li><b>Joueurs max</b><span>Plafonné automatiquement au nombre de slots de son offre — 48, 100 ou 200.</span></li>
+    <li><b>Version de base</b><span>V28, V29, V30, V31 ou une valeur libre.</span></li>
+    <li><b>Description, Discord, boutique</b><span>Les textes et les liens de sa communauté.</span></li>
+    <li><b>Langue et pays</b><span>Français, English, Español — et le pays de rattachement.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Modifiez les champs, puis cliquez sur <b>Sauvegarder</b>.</li>
+    <li>Les onglets <b>Infos / Couleurs / Assets / HUD / Loading</b> classent les réglages par thème.</li>
+    <li>Après un changement de version de base, redémarrez le serveur pour l'appliquer.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Le champ Joueurs max refuse une valeur supérieure à l'offre achetée : c'est volontaire, pour éviter qu'un client dépasse son forfait.</p></div>
+</section>
+
+<section class="doc-page" id="drive">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><circle cx="8.5" cy="10" r="1.6"/><path d="M4 17l4.5-4.5L13 17l2.5-2.5L20 18"/></svg></span><h2>Drive</h2></div>
+  <p class="doc-intro">L'espace de stockage d'images du serveur — celles utilisées en jeu, dans le HUD ou sur les factures.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>La jauge</b><span>Espace utilisé sur l'espace total de l'offre : 100 Mo pour Kova, 250 pour Pro, 500 pour Ultimate.</span></li>
+    <li><b>Les fichiers</b><span>Chaque vignette affiche l'aperçu, le nom, le poids en Mo et l'URL publique.</span></li>
+    <li><b>Copier l'adresse</b><span>Un clic sur le champ sélectionne toute l'URL, prête à coller dans le serveur.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Cliquez sur <b>Téléverser une image</b> et choisissez un fichier — 25 Mo maximum.</li>
+    <li>Si l'espace est insuffisant, un message vous indique exactement votre utilisation.</li>
+    <li>Pour retirer un fichier, cliquez sur <b>Supprimer</b> : il est effacé du stockage et de la liste.</li>
+    <li>Collez l'URL copiée dans un script, un <code>server.cfg</code> ou une configuration de HUD.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Le stockage est hébergé sur Cloudflare R2 : le téléchargement des images par vos joueurs ne vous coûte rien, même à volume élevé.</p></div>
+</section>
+
+<section class="doc-page" id="files">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><path d="M3.5 7.5A2 2 0 0 1 5.5 5.5h4l2 2h7A2 2 0 0 1 20.5 9.5v7a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></span><h2>Fichiers</h2></div>
+  <p class="doc-intro">Le navigateur de fichiers du serveur. Votre client y accède sans jamais voir un terminal.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Les dossiers</b><span>L'arborescence de sa base : <code>seed</code>, <code>[bale_custom]</code>, <code>[marketplace]</code> et tout ce qu'il ajoute.</span></li>
+    <li><b>Assistant IA</b><span>Un point d'entrée vers une aide à la modification de scripts — selon ce qui est activé.</span></li>
+    <li><b>Upload</b><span>L'envoi de fichiers vers son serveur.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Ouvrez un dossier, sélectionnez un fichier, modifiez-le et enregistrez.</li>
+    <li><b>Après toute modification, redémarrez le serveur</b> : sans redémarrage, un script modifié n'est pas rechargé.</li>
+    <li>Chaque client ne voit que ses propres fichiers — l'isolement est fait par le serveur de jeu.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>C'est le point qui fait la différence pour un débutant : il modifie un <code>server.cfg</code> ou un fichier Lua sans ouvrir FileZilla ni taper une commande.</p></div>
+</section>
+
+<section class="doc-page" id="logs">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span><h2>Logs &amp; Webhooks</h2></div>
+  <p class="doc-intro">La remontée des journaux et l'envoi des captures d'écran vers votre Discord.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Logs</b><span>L'historique des événements du serveur, conservé pour consultation.</span></li>
+    <li><b>Webhook</b><span>L'adresse Discord où arrivent les captures d'écran envoyées depuis le panel.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Collez l'adresse de votre webhook Discord dans le champ prévu.</li>
+    <li>Chaque capture envoyée depuis le panel arrive alors dans le salon choisi — pratique pour un signalement joueur.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Le webhook se crée dans Discord : Paramètres du salon → Intégrations → Webhooks → Nouveau webhook.</p></div>
+</section>
+
+<section class="doc-page" id="activity">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><path d="M4 5.5A2 2 0 0 1 6 3.5h13v15H6a2 2 0 0 0-2 2z"/><path d="M4 18.5A2 2 0 0 1 6 16.5h13"/></svg></span><h2>Journal d'activités</h2></div>
+  <p class="doc-intro">Ce que le serveur et le compte ont fait, dans l'ordre chronologique.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Les entrées</b><span>Chaque ligne porte un titre, une date et un détail : « Abonnement activé — Paiement reçu, accès au panel ouvert ».</span></li>
+    <li><b>La couleur de l'icône</b><span>Verte pour une action réussie, rouge pour un arrêt forcé, grise pour une action neutre.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Utilisez le bouton <b>Voir tout</b> pour afficher l'historique complet, jusqu'à 200 entrées.</li>
+    <li>C'est ici qu'un client retrouve la preuve d'un paiement ou la date d'un redémarrage.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Le journal conserve aussi les visites d'un administrateur dans le compte : vous savez toujours qui est entré et quand.</p></div>
+</section>
+
+<section class="doc-page" id="account">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.8 12h2.4M18.8 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg></span><h2>Paramètres</h2></div>
+  <p class="doc-intro">Le compte du client : sa sécurité, son équipe, son abonnement et ses factures.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Équipe</b><span>Les personnes ayant accès au panel, avec les pastilles Owner et Actif.</span></li>
+    <li><b>Sécurité</b><span>Le changement de mot de passe et la gestion des accès.</span></li>
+    <li><b>Abonnement</b><span>L'offre en cours, la date de renouvellement et le lien vers le portail Stripe.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Changez le mot de passe dans l'onglet Sécurité et validez.</li>
+    <li>Pour résilier ou changer de carte, le portail Stripe s'ouvre depuis l'onglet Abonnement — c'est Stripe qui gère, pas le panel.</li>
+    <li>Retirez un membre de l'équipe avec l'icône corbeille rouge.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Un compte sans abonnement actif est renvoyé vers les offres : l'accès au panel s'ouvre et se coupe tout seul selon le paiement.</p></div>
+</section>
+
+<section class="doc-page" id="admin-offres">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><h2>Gérer vos offres</h2></div>
+  <p class="doc-intro">L'administrateur crée et modifie les offres affichées sur la vitrine et dans le panel.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Nom et prix</b><span>Le prix en euros, mensuel ou annuel.</span></li>
+    <li><b>Slots</b><span>Le nombre de joueurs maximum, qui plafonne le champ Joueurs max du client.</span></li>
+    <li><b>Avantages</b><span>La liste des points affichés sur la carte de l'offre.</span></li>
+    <li><b>Mise en avant</b><span>L'offre marquée reçoit l'étiquette « Le plus choisi ».</span></li>
+    <li><b>Active</b><span>Une offre désactivée disparaît de la vitrine sans être supprimée.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Remplissez les champs et enregistrez : la vitrine se met à jour immédiatement.</li>
+    <li>Les trois offres fournies au départ sont Kova 39 €, Kova Pro 69 € et Kova Ultimate 119 € — modifiables librement.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Changer un prix ne change pas les abonnements déjà en cours : Stripe facture le prix enregistré au moment de l'achat.</p></div>
+</section>
+
+<section class="doc-page" id="admin-clients">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 20c.6-3 2.8-4.8 5.5-4.8S14 17 14.6 20"/><path d="M16 5.6a3 3 0 0 1 0 5.8M17.5 20c-.2-1.6-.7-2.9-1.5-3.9"/></svg></span><h2>Gérer vos clients</h2></div>
+  <p class="doc-intro">La liste de vos clients, avec la fiche complète de chacun.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>La liste</b><span>Nom, email, offre, statut d'abonnement et accès au panel.</span></li>
+    <li><b>La fiche</b><span>Tous les champs modifiables : nom, email, rôle, offre, statut, serveur, version de base, slots, description, boutique, Discord.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Cliquez sur le nom d'un client pour ouvrir sa fiche.</li>
+    <li>Passez son statut sur <b>active</b> pour lui ouvrir le panel — et sur autre chose pour le lui fermer.</li>
+    <li>L'ID Pterodactyl et l'adresse IP:port relient son compte à son vrai serveur de jeu.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Sans ID Pterodactyl ni IP:port renseignés, le client reste en mode démonstration : tout s'affiche, mais aucun serveur réel n'est piloté.</p></div>
+</section>
+
+<section class="doc-page" id="admin-depannage">
+  <div class="doc-head"><span class="ic blue"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a3.6 3.6 0 0 0 4.8 4.8l-7 7a2.6 2.6 0 0 1-3.7-3.7z"/><path d="M6.5 6.5l3 3"/></svg></span><h2>Dépannage</h2></div>
+  <p class="doc-intro">Trois outils pour intervenir sur le compte d'un client sans lui demander son mot de passe.</p>
+
+  <h3>Ce que vous y trouvez</h3>
+  <ul class="doc-list">
+    <li><b>Ouvrir son espace</b><span>Vous entrez dans son panel tel qu'il le voit, avec un bandeau d'avertissement en haut.</span></li>
+    <li><b>Réinitialiser son mot de passe</b><span>Génère un mot de passe temporaire à lui communiquer.</span></li>
+    <li><b>Supprimer le compte</b><span>Efface le compte, son serveur et son journal d'activités.</span></li>
+  </ul>
+
+  <h3>Comment l'utiliser</h3>
+  <ol class="doc-steps">
+    <li>Depuis la fiche client, cliquez sur <b>Ouvrir son espace</b>, diagnostiquez, puis <b>Quitter ce compte</b> pour revenir à votre administration.</li>
+    <li>Si le client ne peut plus se connecter, générez un mot de passe temporaire et transmettez-le lui.</li>
+    <li>Chaque visite dans un compte est inscrite dans le journal du client : la transparence est totale.</li>
+  </ol>
+
+  <div class="doc-tip"><span class="ic tip"><svg viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/></svg></span><p>Supprimer un compte ne résilie pas l'abonnement Stripe. Pensez à le résilier côté Stripe aussi, sinon la facturation continue.</p></div>
+</section>
+
+    <p class="foot">Documentation Kova — à mettre à jour à chaque nouvelle fonctionnalité.</p>
+  </main>
+</div>
+
+<script>
+var links = [].slice.call(document.querySelectorAll('.side a'));
+var targets = links.map(function (a) { return document.getElementById(a.getAttribute('data-target')); });
+function update() {
+  var best = 0, min = Infinity;
+  targets.forEach(function (t, i) {
+    if (!t) return;
+    var d = Math.abs(t.getBoundingClientRect().top - 120);
+    if (d < min) { min = d; best = i; }
+  });
+  links.forEach(function (a, i) { a.classList.toggle('on', i === best); });
+}
+window.addEventListener('scroll', update, { passive: true });
+window.addEventListener('load', update);
+update();
+</script>
+</body>
+</html>
